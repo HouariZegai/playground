@@ -1,17 +1,3 @@
-# Data Structures
-* [Array](src/main/java/com/houarizegai/datastructure/array/dynamic)
-* [ArrayList (Aynamic Array)](src/main/java/com/houarizegai/datastructure/array/dynamic)
-* [LinkedList](src/main/java/com/houarizegai/datastructure/)
-* [Stack](src/main/java/com/houarizegai/datastructure/stack)
-  * [Array Stack](src/main/java/com/houarizegai/datastructure/stack/array)
-  * [ArrayList Stack](src/main/java/com/houarizegai/datastructure/stack/dynamicarray)
-  * [LinkedList Stack](src/main/java/com/houarizegai/datastructure/stack/linkedlist)
-* [Queue](src/main/java/com/houarizegai/datastructure/queue)
-  * [Array Queue](src/main/java/com/houarizegai/datastructure/queue/array)
-  * [LinkedList Queue](src/main/java/com/houarizegai/datastructure/queue/linkedlist)
-* [Hash Table (using Array)](src/main/java/com/houarizegai/datastructure/hashtable)
-* [Refresh Collections (pre-defined data structures)](src/main/java/com/houarizegai/datastructure/collections)
-
 ## Data Structures Complexity
 
 ### Simple array (fixed array size)
@@ -43,7 +29,7 @@
 | Delete | O(n) |
 | Space  | O(n) |
 
-Should i choose Linked List or Array List?
+Should I choose Linked List or Array List?
 * A lot of add/delete => LinkedList
 * Fixed element number => ArrayList
 * Insert one time and a lot of access => ArrayList
