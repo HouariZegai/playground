@@ -1,4 +1,4 @@
-package org.zegai.leetcode;
+package org.zegai.leetcode.easy;
 
 import java.util.HashMap;
 import java.util.Map;

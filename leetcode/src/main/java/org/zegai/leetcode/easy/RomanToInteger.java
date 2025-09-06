@@ -1,4 +1,4 @@
-package org.zegai.leetcode;
+package org.zegai.leetcode.easy;
 
 
 public class RomanToInteger {
