@@ -15,6 +15,17 @@ public class FindTheDifference {
     }
 
     public char findTheDifference(String s, String t) {
+        int ch = 0;
+        for (int i = 0; i < s.length(); i++) {
+            ch += (t.charAt(i) - s.charAt(i));
+        }
+
+        ch += t.charAt(t.length() - 1);
+
+        return (char) ch;
+    }
+
+    public char findTheDifference2(String s, String t) { // previous solution is faster than this
         if(s.isEmpty()) {
             return t.charAt(0);
         }
