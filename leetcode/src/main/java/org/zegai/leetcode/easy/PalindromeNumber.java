@@ -20,28 +20,13 @@ public class PalindromeNumber {
             return true;
         }
 
-        int y = x;
-        Stack<Integer> stack = new Stack<>();
-        while (y > 9) {
-            stack.push(y % 10);
-            y /= 10;
-        }
-        stack.push(y);
-
-        y = x;
-        int len = stack.size();
-        for (int i = 0; i < len / 2; i++) {
-            if (y > 9) {
-                if (!stack.pop().equals(y % 10))
-                    return false;
-            } else {
-                if (!stack.pop().equals(y))
-                    return false;
-            }
-
-            y /= 10;
+        int y = 0;
+        int n = x;
+        while (n != 0) {
+            y = y * 10 + n % 10;
+            n /= 10;
         }
 
-        return true;
+        return x == y;
     }
 }
