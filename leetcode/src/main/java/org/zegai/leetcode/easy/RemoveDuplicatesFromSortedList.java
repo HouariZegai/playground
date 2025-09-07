@@ -17,18 +17,14 @@ public class RemoveDuplicatesFromSortedList {
             return head;
         }
 
-        Map<Integer, Boolean> map = new HashMap<>();
-        map.put(head.val, true);
-
         ListNode prev = head;
         ListNode current = prev.next;
         while(current != null) {
-            if(map.containsKey(current.val)) {
+            if(prev.val == current.val) {
                 prev.next = current.next;
                 current.next = null;
                 current = prev.next;
             } else {
-                map.put(current.val, true);
                 prev = prev.next;
                 current = prev.next;
             }
