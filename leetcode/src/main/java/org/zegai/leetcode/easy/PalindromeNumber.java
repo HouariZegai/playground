@@ -1,7 +1,6 @@
 package org.zegai.leetcode.easy;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Stack;
 
 public class PalindromeNumber {
 
@@ -10,27 +9,37 @@ public class PalindromeNumber {
         System.out.println(new PalindromeNumber().isPalindrome(-121));
         System.out.println(new PalindromeNumber().isPalindrome(10));
         System.out.println(new PalindromeNumber().isPalindrome(1234321));
+        System.out.println(new PalindromeNumber().isPalindrome(1000030001));
     }
 
     public boolean isPalindrome(int x) {
-        if(x < 0) {
+        if (x < 0) {
             return false;
         }
-        if(x < 10) {
+        if (x < 10) {
             return true;
         }
 
-        List<Integer> arr = new LinkedList<>();
-        while(x >= 10) {
-            arr.add(x % 10);
-            x /= 10;
+        int y = x;
+        Stack<Integer> stack = new Stack<>();
+        while (y > 9) {
+            stack.push(y % 10);
+            y /= 10;
         }
-        arr.add(x);
+        stack.push(y);
 
-        for (int i = 0; i < arr.size() / 2; i++) {
-            if(!arr.get(i).equals(arr.get(arr.size() - 1 - i))) {
-                return false;
+        y = x;
+        int len = stack.size();
+        for (int i = 0; i < len / 2; i++) {
+            if (y > 9) {
+                if (!stack.pop().equals(y % 10))
+                    return false;
+            } else {
+                if (!stack.pop().equals(y))
+                    return false;
             }
+
+            y /= 10;
         }
 
         return true;
