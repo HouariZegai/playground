@@ -1,12 +1,16 @@
-package com.houarizegai.algorithms;
+package org.zegai.algorithms;
 
 import java.util.Random;
 
 public class Utils {
+
+    private Utils() {
+    }
+
     public static void displayTable(int[] array) {
         System.out.print("Array:[ ");
-        for(int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int j : array) {
+            System.out.print(j + " ");
         }
         System.out.println(" ]");
     }
@@ -14,7 +18,7 @@ public class Utils {
     public static int[] generateRandomTable(int size, int randomBound) {
         Random random = new Random();
         int[] array = new int[size];
-        for(int i = 0; i < array.length; i++) { // Init table
+        for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(randomBound);
         }
         return array;

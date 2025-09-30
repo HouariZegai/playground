@@ -1,11 +1,12 @@
-package com.houarizegai.algorithms.egyptian_multiplication;
+package org.zegai.algorithms.egyptianmultiplication;
 
 public class EgyptianMultiplicationDemo {
-    // complexity of this algorithm is : O(log(n))
+
+    // The algorithm complexity is : O(log(n))
     private static int getMul(int a, int b) { // Calc multiplication (Get A * B)
         int result = 0;
-        while(b >= 1) {
-            if(b % 2 != 0)
+        while (b >= 1) {
+            if (b % 2 != 0)
                 result += a;
 
             b /= 2;

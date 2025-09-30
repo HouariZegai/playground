@@ -1,6 +1,7 @@
-package com.houarizegai.algorithms.graph.dfs;
+package org.zegai.algorithms.graph.dfs;
 
 public class Node {
+
     private int value;
     private Node next;
 

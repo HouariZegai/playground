@@ -1,8 +1,9 @@
-package com.houarizegai.algorithms.sort.bubblesort;
+package org.zegai.algorithms.sort.bubblesort;
 
-import com.houarizegai.algorithms.Utils;
+import org.zegai.algorithms.Utils;
 
 public class BubbleSort {
+
     public static void main(String[] args) {
         int[] array = Utils.generateRandomTable(15, 50);
         Utils.displayTable(array);
@@ -12,9 +13,9 @@ public class BubbleSort {
 
     public static void bubbleSort(int[] array) {
         int size = array.length;
-        for(int i = 0; i < size; i++) {
-            for(int j = 0; j < size - i - 1; j++) {
-                if(array[j] > array[j + 1]) {
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
                     array[j] = array[j] + array[j + 1];
                     array[j + 1] = array[j] - array[j + 1];
                     array[j] = array[j] - array[j + 1];

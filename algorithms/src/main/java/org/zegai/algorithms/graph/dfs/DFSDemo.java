@@ -1,4 +1,4 @@
-package com.houarizegai.algorithms.graph.dfs;
+package org.zegai.algorithms.graph.dfs;
 /*
 
 Example for test:
@@ -13,6 +13,7 @@ Example for test:
 
 
 public class DFSDemo {
+
     public static void main(String[] args) {
         DFS dfs = new DFS(7); // Initialize by number of node
 

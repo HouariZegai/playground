@@ -1,6 +1,7 @@
-package com.houarizegai.algorithms.graph.binary_tree;
+package org.zegai.algorithms.graph.binarytree;
 
 public class BinaryTreeDemo {
+
     public static void main(String[] args) {
         // Create root node
         Node root = new Node(10, null, null);

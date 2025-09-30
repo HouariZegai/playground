@@ -1,6 +1,7 @@
-package com.houarizegai.algorithms.graph.binary_tree;
+package org.zegai.algorithms.graph.binarytree;
 
 public class Node {
+
     private int value;
     private Node left;
     private Node right;

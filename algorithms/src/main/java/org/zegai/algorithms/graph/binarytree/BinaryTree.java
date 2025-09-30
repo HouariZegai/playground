@@ -1,4 +1,4 @@
-package com.houarizegai.algorithms.graph.binary_tree;
+package org.zegai.algorithms.graph.binarytree;
 
 public class BinaryTree {
     private Node root;
@@ -16,17 +16,17 @@ public class BinaryTree {
     }
 
     public void add(Node newNode, Node rootExplore) {
-        if(rootExplore == null)
+        if (rootExplore == null)
             return;
 
-        if(newNode.getValue() > rootExplore.getValue()) {
-            if(rootExplore.getRight() == null)
+        if (newNode.getValue() > rootExplore.getValue()) {
+            if (rootExplore.getRight() == null)
                 rootExplore.setRight(newNode);
             else {
                 add(newNode, rootExplore.getRight());
             }
         } else {
-            if(rootExplore.getLeft() == null)
+            if (rootExplore.getLeft() == null)
                 rootExplore.setLeft(newNode);
             else {
                 add(newNode, rootExplore.getLeft());
@@ -35,11 +35,11 @@ public class BinaryTree {
     }
 
     public boolean search(int value, Node rootExplore) {
-        if(rootExplore == null)
+        if (rootExplore == null)
             return false;
-        if(rootExplore.getValue() == value)
+        if (rootExplore.getValue() == value)
             return true;
-        if(value > rootExplore.getValue())
+        if (value > rootExplore.getValue())
             return search(value, rootExplore.getRight());
         else
             return search(value, rootExplore.getLeft());

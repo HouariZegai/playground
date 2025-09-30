@@ -1,8 +1,9 @@
-package com.houarizegai.algorithms.search.linear;
+package org.zegai.algorithms.search.linear;
 
-import com.houarizegai.algorithms.Utils;
+import org.zegai.algorithms.Utils;
 
 public class LinearSearch {
+
     public static void main(String[] args) {
         int[] array = Utils.generateRandomTable(10, 20);
         Utils.displayTable(array);
@@ -14,8 +15,8 @@ public class LinearSearch {
     }
 
     private static boolean linearSearch(int[] array, int target) {
-        for(int i = 0; i < array.length; i++) { // brute force
-            if(array[i] == target)
+        for (int j : array) { // brute force
+            if (j == target)
                 return true;
         }
         return false;

@@ -1,15 +1,15 @@
-package com.houarizegai.algorithms.search.kmp;
+package org.zegai.algorithms.search.kmp;
 
 import java.util.LinkedList;
 import java.util.List;
 
 /*
-* The Knuth-Morris-Pratt (KMP) String Matching Algorithm
-* (Substring Search)
-* Time Complexity is: O(X + Y) where
-*   X is length of text (text.length) &
-*   Y is length of pattern (pattern.length)
-*/
+ * The Knuth-Morris-Pratt (KMP) String Matching Algorithm
+ * (Substring Search)
+ * Time Complexity is: O(X + Y) where
+ *   X is length of text (text.length) &
+ *   Y is length of pattern (pattern.length)
+ */
 public class KMP {
 
     private final String TEXT; // النص الذي يتم البحث فيه
@@ -22,7 +22,7 @@ public class KMP {
 
     public KMP(String text, boolean isLetterSensitive) {
         TEXT = text;
-        isLetterSensitive = isLetterSensitive;
+        this.isLetterSensitive = isLetterSensitive;
     }
 
     public void setLetterSensitive(boolean isLetterSensitive) {
@@ -32,18 +32,18 @@ public class KMP {
     private int[] computePrefixArray(char[] pattern) { // Calculate table of prefix
         int[] result = new int[pattern.length];
         result[0] = 0;
-        for(int i = 1; i < result.length; i++)
+        for (int i = 1; i < result.length; i++)
             result[i] = -1;
         int i = 1;
         int j = 0;
 
-        while(i < pattern.length) {
-            if(pattern[i] == pattern[j]) {
+        while (i < pattern.length) {
+            if (pattern[i] == pattern[j]) {
                 result[i] = j + 1;
                 i++;
                 j++;
             } else {
-                if(j == 0) {
+                if (j == 0) {
                     result[i++] = 0;
                 } else {
                     j = result[j - 1];
@@ -58,7 +58,7 @@ public class KMP {
         char[] patternSearch;
         char[] textSearch;
 
-        if(isLetterSensitive) {
+        if (isLetterSensitive) {
             patternSearch = pattern.toCharArray();
             textSearch = TEXT.toCharArray();
         } else {
@@ -71,13 +71,13 @@ public class KMP {
         int indexOfText = 0; // Index of Text table
         int indexOfPattern = 0; // Index of Pattern table
 
-        while(indexOfText < textSearch.length && indexOfPattern < patternSearch.length) {
+        while (indexOfText < textSearch.length && indexOfPattern < patternSearch.length) {
             if (textSearch[indexOfText] == patternSearch[indexOfPattern]) {
                 indexOfText++;
                 indexOfPattern++;
             } else {
-                if(indexOfPattern == 0) {
-                  indexOfText++;
+                if (indexOfPattern == 0) {
+                    indexOfText++;
                 } else {
                     indexOfPattern = prefixArrayOfPattern[indexOfPattern - 1];
                 }
@@ -92,7 +92,7 @@ public class KMP {
         char[] patternSearch;
         char[] textSearch;
 
-        if(isLetterSensitive) {
+        if (isLetterSensitive) {
             patternSearch = pattern.toCharArray();
             textSearch = TEXT.toCharArray();
         } else {
@@ -105,19 +105,19 @@ public class KMP {
         int indexOfText = 0; // Index of Text table
         int indexOfPattern = 0; // Index of Pattern table
 
-        while(indexOfText < textSearch.length) {
+        while (indexOfText < textSearch.length) {
             if (textSearch[indexOfText] == patternSearch[indexOfPattern]) {
                 indexOfText++;
                 indexOfPattern++;
             } else {
-                if(indexOfPattern == 0) {
+                if (indexOfPattern == 0) {
                     indexOfText++;
                 } else {
                     indexOfPattern = prefixArrayOfPattern[indexOfPattern - 1];
                 }
             }
 
-            if(indexOfPattern == patternSearch.length) { // if found add the index in the list of foundIndex
+            if (indexOfPattern == patternSearch.length) { // if found add the index in the list of foundIndex
                 foundIndex.add(indexOfText - indexOfPattern);
                 indexOfPattern = 0;
             }
@@ -129,13 +129,13 @@ public class KMP {
     /* Additional Methods */
 
     public void printArray(int[] array) { // print array of integer
-        for(int item : array)
+        for (int item : array)
             System.out.print(item + " ");
         System.out.println();
     }
 
     public void printArray(char[] array) { // print array of char
-        for(char item : array)
+        for (char item : array)
             System.out.print(item + " ");
         System.out.println();
     }

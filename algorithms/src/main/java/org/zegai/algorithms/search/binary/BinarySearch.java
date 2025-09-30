@@ -1,8 +1,9 @@
-package com.houarizegai.algorithms.search.binary;
+package org.zegai.algorithms.search.binary;
 
-import com.houarizegai.algorithms.Utils;
+import org.zegai.algorithms.Utils;
 
 public class BinarySearch {
+
     public static void main(String[] args) {
         int[] data = new int[10];
         for (int i = 0; i < data.length; i++) {
@@ -22,12 +23,12 @@ public class BinarySearch {
         int middle;
         boolean isFound = false;
 
-        while(!isFound && low <= high) {
+        while (!isFound && low <= high) {
             middle = low + (high - low) / 2;
 
-            if(target == array[middle]) {
+            if (target == array[middle]) {
                 isFound = true;
-            }else if(target > array[middle]) {
+            } else if (target > array[middle]) {
                 low = middle + 1;
             } else {
                 high = middle - 1;
