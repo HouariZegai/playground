@@ -2,7 +2,7 @@
 A curated collection of hands-on examples and implementations to learn and apply various **Software Engineering** concepts, powered by **Java**.
 
 [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Java 17](https://img.shields.io/badge/Java-17-red.svg)
+![Java 25](https://img.shields.io/badge/Java-25-red.svg)
 
 # Contents
 
