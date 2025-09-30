@@ -11,33 +11,20 @@ A curated collection of hands-on examples and implementations to learn and apply
 The data structures are the way to organize and store data in a computer so that it can be used efficiently. The data structures are used to make working with data easier.
 Read [Data Structures README](data-structures) to see the complexity of each data structure.
 
-* [Array](data-structures/src/main/java/com/houarizegai/datastructures/array/simple)
-* [ArrayList (Aynamic Array)](data-structures/src/main/java/com/houarizegai/datastructures/array/dynamic)
-* [LinkedList](data-structures/src/main/java/com/houarizegai/datastructures/linkedlist)
-* [Stack](data-structures/src/main/java/com/houarizegai/datastructures/stack)
-  * [Array Stack](data-structures/src/main/java/com/houarizegai/datastructures/stack/array)
-  * [ArrayList Stack](data-structures/src/main/java/com/houarizegai/datastructures/stack/dynamicarray)
-  * [LinkedList Stack](data-structures/src/main/java/com/houarizegai/datastructures/stack/linkedlist)
-* [Queue](data-structures/src/main/java/com/houarizegai/datastructures/queue)
-    * [Array Queue](data-structures/src/main/java/com/houarizegai/datastructures/queue/array)
-    * [LinkedList Queue](data-structures/src/main/java/com/houarizegai/datastructures/queue/linkedlist)
-* [Hash Table (using Array)](data-structures/src/main/java/com/houarizegai/datastructures/hashtable)
-* [Refresh Collections (pre-defined data structures)](data-structures/src/main/java/com/houarizegai/datastructures/collections)
-
 ## Algorithms
 
-* [Graph](algorithms/src/main/java/com/houarizegai/algorithms/graph)
-    * [Binary Tree](algorithms/src/main/java/com/houarizegai/algorithms/graph/binary_tree)
-    * [DFS](algorithms/src/main/java/com/houarizegai/algorithms/graph/dfs)
-* [Search](algorithms/src/main/java/com/houarizegai/algorithms/search)
-    * [Linear Search](algorithms/src/main/java/com/houarizegai/algorithms/search/linear)
-    * [Binary Search](algorithms/src/main/java/com/houarizegai/algorithms/search/binary)
-    * [Interpolation Search](algorithms/src/main/java/com/houarizegai/algorithms/search/interpolation)
-    * [KMP (pattern search)](algorithms/src/main/java/com/houarizegai/algorithms/search/kmp)
-* [Sort](algorithms/src/main/java/com/houarizegai/algorithms/sort)
-    * [Bubble Sort](algorithms/src/main/java/com/houarizegai/algorithms/sort/bubblesort)
-* [Recursion](algorithms/src/main/java/com/houarizegai/algorithms/recursion)
-* [Egyptian Multiplication](algorithms/src/main/java/com/houarizegai/algorithms/egyptian_multiplication)
+* [Graph](algorithms/src/main/java/org/zegai/algorithms/graph)
+    * [Binary Tree](algorithms/src/main/java/org/zegai/algorithms/graph/binary_tree)
+    * [DFS](algorithms/src/main/java/org/zegai/algorithms/graph/dfs)
+* [Search](algorithms/src/main/java/org/zegai/algorithms/search)
+    * [Linear Search](algorithms/src/main/java/org/zegai/algorithms/search/linear)
+    * [Binary Search](algorithms/src/main/java/org/zegai/algorithms/search/binary)
+    * [Interpolation Search](algorithms/src/main/java/org/zegai/algorithms/search/interpolation)
+    * [KMP (pattern search)](algorithms/src/main/java/org/zegai/algorithms/search/kmp)
+* [Sort](algorithms/src/main/java/org/zegai/algorithms/sort)
+    * [Bubble Sort](algorithms/src/main/java/org/zegai/algorithms/sort/bubblesort)
+* [Recursion](algorithms/src/main/java/org/zegai/algorithms/recursion)
+* [Egyptian Multiplication](algorithms/src/main/java/org/zegai/algorithms/egyptian_multiplication)
 
 ## SOLID Principles
 
@@ -85,7 +72,7 @@ Solutions to recurring problems and are formalized best practices that the progr
 
 13. [Chain of Responsibility](design-patterns/behavioural/chain-of-responsability)
 14. [Command](design-patterns/behavioural/command)
-15. [Interepter](design-patterns/behavioural/interpreter)
+15. [Interpreter](design-patterns/behavioural/interpreter)
 16. [Iterator](design-patterns/behavioural/iterator)
 17. [Mediator](design-patterns/behavioural/mediator)
 18. [Memento](design-patterns/behavioural/memento)
